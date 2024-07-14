@@ -1,0 +1,40 @@
+<!--     
+    <?php if($finResult >= 90): ?>
+
+        <h1><?= $finResult ?> is A+</h1>
+
+    <?php elseif($finResult < 90 && $finResult >= 80): ?>
+
+        <h1><?= $finResult ?> is B+</h1>
+
+    <?php elseif($finResult < 80 && $finResult >=70): ?>
+
+        <h1><?= $finResult ?> is C+</h1>
+
+    <?php elseif($finResult < 70 && $finResult >= 60):?>
+
+        <h1><?= $finResult ?> is D+</h1>
+
+    <?php else: ?>
+
+        <h1>fail</h1>
+
+    <?php endif ?> -->
+
+    <!-- <?php while($x < 10): ?>
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    
+    
+    
+    
+    <?php ++$x ?>
+
+
+    <?php endwhile ?>
+    -->
