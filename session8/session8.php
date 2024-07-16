@@ -1,6 +1,6 @@
 <?php
 
-echo "<h2>session 8</h2>";
+echo '<h2>session 8</h2>';
 
 // if(isset($username)) {
 //     if(!empty($username)) {
@@ -36,12 +36,12 @@ $flag = 0;
         $flag++;
     }
     if(strlen($username) < 3) {
-        $all_errors['username_length'] = "error username must be more than 2 characters <br>";
+        $all_errors['username_length'] = "error username must be more than 3 characters <br>";
     } else {
         $flag++;
     }
-    if(! preg_match("/senior$/", $username)) {
-        $all_errors['username_senior'] = "error your username must end with senior <br>";
+    if(! preg_match("/^[A-Z][a-zA-Z]*$/", $username)) {
+        $all_errors['username_senior'] = "error your username must start with an uppercase letter and it can not contain any numbers or special characters <br>";
     } else {
         $flag++;
     }
@@ -55,12 +55,12 @@ $flag = 0;
         $flag++;
     }
     if(strlen($password) < 8) {
-        $all_errors['password_length'] = "error password must be more than 2 characters <br>";
+        $all_errors['password_length'] = "error password must be more than 8 characters <br>";
     } else {
         $flag++;
     }
-    if(! preg_match("@[A-Za-z]@", $password)) {
-        $all_errors['password_reg'] = "error password must contain Capital letter <br>";
+    if(! preg_match("/^(?=.*[A-Z])(?=.*[\d\W])[^ ]+$/", $password)) {
+        $all_errors['password_reg'] = "error password must contain at least one uppercase letter and at least one number or special character and it must not contain any spaces. <br>";
     } else {
         $flag++;
     }
@@ -84,6 +84,7 @@ $flag = 0;
     if($flag === 8) {
         $userCredentials = "username : $username <br>" . " password : $password <br>" . "email : $email <br>";
     }
+
 }
 
 ?>
@@ -97,7 +98,7 @@ $flag = 0;
 </head>
 
 </head>
-<body>
+<body style="margin: 10px">
     <?php foreach($all_errors as $error) :  ?>
         <div class="alert alert-danger">
             <?= $error ?>
