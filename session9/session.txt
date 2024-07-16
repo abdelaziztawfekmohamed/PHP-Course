@@ -1,0 +1,15 @@
+<?php if(isset($_POST['submitBTN'])): ?>
+    <?= 'username : '. $_POST['username'] . '<br>' ?>
+    <?= 'password : '. $_POST['password'] . '<br>' ?>
+    <?= 'email    : '. $_POST['email']    . '<br>' ?>
+    <?= 'gender   : '. $_POST['gender']   . '<br> <br>' ?>
+    <?php foreach($courses as $key => $course) :  ?>
+        <?= 'course '. $key + 1 . ' : ' . $course . '<br>' ?>
+    <?php endforeach ?>
+    <?= '<br>' ?>
+    <?php foreach($laps as $key => $lap) :  ?>
+        <?= 'lap '. $key + 1 . ' : ' . $lap . '<br>' ?>
+    <?php endforeach ?>
+    <?= '<br>' ?>
+    <?= 'price : '. $_POST['price'] . '<br>' ?>
+<?php endif ?>
