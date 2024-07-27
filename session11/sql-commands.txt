@@ -1,0 +1,13 @@
+CRUD 
+create(insert) read(select) update delete
+R => select
+
+SELECT column_name FROM Table_name
+SELECT * from emps  // to select all columns
+SELECT username , email , password from emps
+
+C => insert 
+INSERT INTO Table_name (column_name1 , column_name2) values (Ahmed , 123) ;
+
+U => update
+UPDATE Table_name SET column_name1= 'new value' , column_name2='new value' WHERE id = 100;
